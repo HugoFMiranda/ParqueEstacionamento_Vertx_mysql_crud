@@ -1,0 +1,26 @@
+.texto_PagCli {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+}
+
+body {
+    background-image: url("../imagens/estbg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+footer {
+    color: white;
+}
+
+.titulo {
+    color: white;
+}
+
+.conteudo {
+    position: relative;
+    padding-top: 25%;
+    padding-bottom: 25%;
+}

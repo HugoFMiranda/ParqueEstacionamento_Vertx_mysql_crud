@@ -1,0 +1,154 @@
+header {
+    margin-bottom: 10px;
+}
+
+.A_cabecalho {
+    width: 85%;
+    border-bottom: 2px solid #003E56;
+}
+
+.cabecalho {
+    color: #003E56;
+}
+
+#conteudo {
+    padding: 10px;
+    width: 100%;
+}
+
+#progress-bar {
+    width: 100%;
+    padding: 10px;
+}
+
+.progress {
+    width: 50%;
+}
+
+.progress_bar {
+    width: 100%;
+    background-color: #18a2d828;
+}
+
+.progress-bar {
+    width: 50%;
+}
+
+.linha {
+    width: 100%;
+}
+
+.caixa {
+    padding: 1px;
+}
+
+.paralelograma {
+    width: 150px;
+    height: 70px;
+    /* background: #c1c1c1; */
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.paralelograma:hover {
+    background-color: #003E56;
+    color: white;
+}
+
+.paralelograma:active {
+    background-color: rgb(102, 170, 247);
+}
+
+.e {
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    border-right: 3.5px solid #003E56;
+    border-left: 3.5px solid #003E56;
+    border-top: 3.5px solid #003E56;
+}
+
+.d {
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    border-right: 3.5px solid #003E56;
+    border-left: 3.5px solid #003E56;
+    border-bottom: 3.5px solid #003E56;
+}
+
+.b {
+    padding-top: 20px;
+}
+
+.u {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #003E56;
+}
+
+.estc {
+    padding-bottom: 20px;
+    border-bottom: 2.5px solid #003E56;
+}
+
+.estb {
+    border-top: 2.5px solid #003E56;
+}
+
+.estd {
+    height: 5px;
+    width: 100%;
+    opacity: 1;
+    background-image: linear-gradient(to right, #003E56, #003E56 19px, #e5e5f700 19px, #e5e5f700);
+    background-size: 38px 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.all h3 {
+    padding-top: 20px;
+    color: #003E56;
+    font-weight: bold;
+}
+
+h6 {
+    color: rgb(66, 160, 23);
+}
+
+
+/* ! TESTE */
+
+.A00,
+.A01,
+.A08,
+.A021,
+.B03,
+.B07,
+.B16,
+.C25,
+.C17,
+.C18 {
+    background-color: rgba(255, 0, 0, 0.623);
+}
+
+.A05,
+.A13,
+.A14,
+.B18,
+.B19,
+.B20,
+.C00,
+.C01,
+.C02 {
+    background-color: rgba(240, 236, 20, 0.644);
+}
+
+@media (max-width: 1000px) {
+    #conteudo {
+        padding-top: 20px;
+    }
+    .progress {
+        width: 80%;
+    }
+}

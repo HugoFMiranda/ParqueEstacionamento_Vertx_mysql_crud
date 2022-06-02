@@ -1,0 +1,25 @@
+.texto_info{
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+}
+.cabecalho {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    color: #003E56;
+}
+.tabela_horario,
+td {
+    width: 65%;
+    border: 1px solid #003E56;
+    font-size: 20px;
+    text-align: center;
+}
+tr:hover {
+    background-color: #003E56;
+    color: white;
+}

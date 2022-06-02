@@ -1,0 +1,253 @@
+/** Header*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F0F4FF;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    background-color: #003E56;
+    margin-bottom: 50px;
+    /*border-bottom: 1px solid #003e56;*/
+}
+
+.navbar {
+    width: 100%;
+}
+
+.nav-item {
+    font-size: 16px;
+}
+
+.pagCli {
+    width: 87%
+}
+
+.navbar-nav {
+    width: 100%;
+}
+
+.H_logo {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.H_logo a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.H_logo img {
+    display: flex;
+    width: 100%;
+    height: 60%;
+    margin: 5%;
+}
+
+.H_meio {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.H_meio a:hover {
+    color: #0e9797;
+}
+
+.H_meio a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 5%;
+    font-size: 19px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: font-size 0.5s;
+}
+
+.H_dir {
+    display: flex;
+    width: 65%;
+}
+
+.H_dir a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin: 5%;
+    text-decoration: none;
+}
+
+.H_dir .H_Button {
+    border: 1px solid white;
+}
+
+.H_Button {
+    height: 60%;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    letter-spacing: 0px;
+    word-spacing: 3.2px;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: uppercase;
+    line-height: 15px;
+    padding: 8px 25px 8px 25px;
+    border-radius: 50px;
+    background-color: #003e56;
+    border: 2px solid #003e56;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.H_Button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.H_Button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.H_Button:hover span {
+    padding-right: 25px;
+}
+
+.H_Button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.H_Button:active {
+    background: #0e9797;
+}
+
+footer {
+    margin-top: 15px;
+    bottom: 0;
+    width: 100%;
+}
+
+.Esq {
+    position: relative;
+}
+
+.Esq .navbar {
+    position: fixed;
+    width: 11%;
+    height: 100%;
+    background-color: #003e56;
+}
+
+.Esq .container-fluid {
+    align-self: flex-start;
+}
+
+.Dir {
+    width: 100%;
+    height: 100%;
+    margin-left: 11%;
+}
+
+@media (max-width: 1000px) {
+    .navbar,
+    .container-fluid,
+    .navbar-nav {
+        flex-wrap: wrap;
+    }
+    .H_dir,
+    .H_dir a,
+    .H_logo,
+    .H_logo a {
+        flex: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .H_dir a,
+    .H_logo img,
+    .H_meio a {
+        margin: 4px;
+    }
+    .H_logo img {
+        width: 35%;
+    }
+    .H_Button {
+        padding: 20px 25px 20px 25px;
+    }
+    .Aderir_butao .H_Button span {
+        padding: 10px 15px 10px 15px;
+    }
+    header {
+        padding-bottom: 500px;
+        margin-bottom: 0px;
+    }
+    footer {
+        padding-top: 15px;
+    }
+    #conteudo {
+        padding-top: 0px;
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        padding-bottom: 450px;
+        margin-bottom: 0px;
+    }
+    .Esq .navbar {
+        background-color: transparent;
+    }
+    .navbar-brand {
+        padding-left: 16px;
+    }
+    .collapse {
+        text-align: center;
+        background-color: #003e56;
+    }
+    .corpo {
+        flex-direction: column;
+    }
+    .Dir {
+        width: 70%;
+        margin-top: 300px;
+        margin-left: 60px;
+    }
+}
+
+@media (max-width:550px) {
+    header {
+        padding-bottom: 400px;
+        margin-bottom: 0px;
+    }
+}

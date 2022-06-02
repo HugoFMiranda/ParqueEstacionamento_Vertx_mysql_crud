@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parque de estacionamento</title>
+    <meta name="author" content="Hugao" />
+    <meta name="description" content="Parque de estacionamento" />
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <script src="js/btnlog.js"></script>
+    <script src="js/user.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item  H_logo">
+                        <a class="navbar-brand" href="index.html"><img src="imagens/logo.png" alt="logo"></a>
+                    </li>
+                    <li class="nav-item H_meio text-center lbconsultar">
+                        <a class="nav-link" href="informacoes.html">Informacoes</a>
+                    </li>
+                    <li class="nav-item H_meio text-center lbprecos">
+                        <a class="nav-link" href="index.html#sectionprecos">Precos</a>
+                    </li>
+                    <li class="nav-item H_meio text-center lbcontactos">
+                        <a class="nav-link" href="index.html##sectioncontactos">Contactos</a>
+                    </li>
+                    <li class="H_dir text-center">
+                        <a href="mapaParque.html"><button class="H_Button"><span>Reservar</span></button></a>
+                    </li>
+                    <li class="H_dir text-center">
+                        <a href="login.html"><button class="H_Button"><span>Login</span></button></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- login form -->
+    <div class="login-form">
+        <div class="butoes">
+            <a href="#sectionregisto"><button id="botao_registo" onclick="loginbtn(0)">Register</button></a>
+            <a href="#sectionlogin"><button id="botao_login" onclick="loginbtn(1)">Sign in</button></a>
+        </div>
+        <form id="login" action="javascript:verflogin()" method="POST">
+            <h1 id="sectionlogin">Login</h1>
+            <div class="content">
+                <div class="input-field">
+                    <input type="email" id="emailL" placeholder="Email" name="emailL" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="passwordL" placeholder="Password" name="passwordL" required>
+                </div>
+                <a href="#" class="link">Forgot Your Password?</a>
+                <div class="input-field">
+                    <button class="H_Button" type="submit" name="submit"><span>Login</span></button>
+                </div>
+            </div>
+        </form>
+        <form id="registar" action="javascript:registoCliente()" method="POST">
+            <h1 id="sectionregisto">Registar</h1>
+            <div class="content">
+                <div class="input-field">
+                    <input type="text" placeholder="Nome" id="nomeR" name="nomeR" required>
+                </div>
+                <div class="input-field">
+                    <input type="email" placeholder="Email" id="emailR" name="emailR" required>
+                </div>
+                <div class="input-field">
+                    <input type="text" onkeyup="checknifR()" placeholder="NIF" id="nifR" name="nifR" required>
+                </div>
+                <div class="errotxt errotxtnif">Erro: NIF invalido</div>
+                <div class="input-field">
+                    <input type="password" onkeyup="checkpwdR()" id="passwordR1" placeholder="Password" name="passwordR1" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" onkeyup="checkpwdR()" id="passwordR2" placeholder="Repetir Password" name="passwordR2" required>
+                </div>
+                <div class="errotxt errotxtpw">Erro: As passwords nao coincidem</div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" oninput="showpwR()" type="checkbox" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Mostrar password</label>
+                </div>
+                <div class="input-field">
+                    <select id="tipoR" class="form-select" aria-label="Default select example">
+                    <option selected name="tipo">Tipo de conta</option>
+                    <option value="1">Cliente</option>
+                    <option value="2">Gestor</option>
+                  </select>
+                </div>
+                <div class="errotxt errotxttipo">Erro: Selecione um tipo de conta</div>
+                <div class="input-field">
+                    <button class="H_Button btn btnR" type="submit" id="registobtn" name="submit" disabled><span>Registar</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="footer d-flex align-items-center justify-content-center">
+            <p>&copy;2022 - Grupo2DB8 </p>
+        </div>
+    </footer>
+    <script src="js/loginreg.js"></script>
+</body>
+
+</html>

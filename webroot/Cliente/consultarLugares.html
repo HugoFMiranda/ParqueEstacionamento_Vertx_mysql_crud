@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parque de estacionamento</title>
+    <meta name="author" content="Hugao" />
+    <meta name="description" content="Parque de estacionamento" />
+    <link rel="icon" type="image/x-icon" href="../imagens/favicon.ico">
+    <!-- Bootstrap -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <link rel="stylesheet" href="../css/mapaparque.css" />
+    <link rel="stylesheet" href="../css/consultarLugares.css" />
+    <script src="../js/user.js"></script>
+</head>
+
+<body>
+    <div class="corpo d-flex">
+        <div class="Esq navbarEsq d-flex">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid d-flex flex-column">
+                    <a class="navbar-brand text-center nome-lbl" href="../paginaCliente.html" style="padding-bottom:10px">User</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                    <div class="collapse navbar-collapse" id="navbarToggler">
+                        <ul class="navbar-nav d-flex flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Pagina inicial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../cliente/paginaSobreCliente.html">Sobre</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Parque</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../cliente/consultarLugares.html">Consultar
+                                            lugares</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../cliente/consultarLugares.html">Consultar reservas</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../cliente/viaturas.html">Viaturas</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pagamentos</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../cliente/faturas.html">Ver faturas</a></li>
+                                    <li><a class="dropdown-item" href="../cliente/pagamentos.html">Efetuar pagamentos</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="sairUsr()" href="../index.html">Sair</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="Dir">
+            <div id="conteudo" class="d-flex flex-column align-items-center justify-content-center">
+                <h1 class="A_cabecalho text-center">Escolha um lugar</h1>
+                <div class="input-field">
+                    <select id="npiso" onclick="mpiso()" class="form-select" aria-label="Selecione o piso">
+                    <option selected name="tipo">Selecione o piso</option>
+                    <option value="1">Todos os pisos</option>
+                    <option value="2">Piso -1</option>
+                    <option value="3">Piso 0</option>
+                    <option value="4">Piso 1</option>
+                  </select>
+                </div>
+            </div>
+            <div id="progress-bar" class="d-flex flex-column align-items-center justify-content-center">
+                <div class="progress">
+                    <div class="progress_bar">
+                        <div class="progress-bar" style="background-color:#003E56">Lotação 50%</div>
+                    </div>
+                </div>
+            </div>
+            <div id="Tpisos" class="all d-flex flex-column align-items-center justify-content-center">
+                <div id="piso_m1" class="d-flex flex-column align-items-center justify-content-center">
+                    <div>
+                        <h3>Piso -1</h3>
+                    </div>
+                    <div class="linha b d-flex align-items-center justify-content-center">
+                        <div class="caixa">
+                            <div class="paralelograma d A00 ttt" id="A00">A00</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d A01" id="A01">A01</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d A02" id="A02">A02</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d A03" id="A03">A03</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d A04" id="A04">A04</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d A05" id="A05">A05</div>
+                        </div>
+                    </div>
+                    <div class="linha estc d-flex align-items-center justify-content-center">
+                        <div class="caixa">
+                            <div class="paralelograma e A06" id="A06">A06</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e A07" id="A07">A07</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e A08" id="A08">A08</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e A08" id="A09">A09</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e A10" id="A10">A10</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e A11" id="A11">A11</div>
+                        </div>
+                    </div>
+                    <div class="estd">
+                    </div>
+                    <div class="linha estb b d-flex align-items-center justify-content-center">
+                        <div class="caixa">
+                            <div class="paralelograma d A12" id="A12">A12</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d A13" id="A13">A13</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d A14" id="A14">A14</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d A15" id="A15">A15</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d A16" id="A16">A16</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d A17" id="A17">A17</div>
+                        </div>
+                    </div>
+                    <div class="linha u d-flex align-items-center justify-content-center">
+                        <div class="caixa">
+                            <div class="paralelograma e A18" id="A18">A18</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e A19" id="A19">A19</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e A20" id="A20">A20</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e A21" id="A21">A21</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e A22" id="A22">A22</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e A23" id="A23">A23</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="piso_0" class="d-flex flex-column align-items-center justify-content-center">
+                    <div>
+                        <h3>Piso 0</h3>
+                    </div>
+                    <div class="linha b d-flex align-items-center justify-content-center">
+                        <div class="caixa">
+                            <div class="paralelograma d B00" id="B00">B00</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d B01" id="B01">B01</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d B02" id="B02">B02</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d B03" id="B03">B03</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d B04" id="B04">B04</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d B05" id="B05">B05</div>
+                        </div>
+                    </div>
+                    <div class="linha estc d-flex align-items-center justify-content-center">
+                        <div class="caixa">
+                            <div class="paralelograma e B06" id="B06">B06</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e B07" id="B07">B07</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e B08" id="B08">B08</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e B09" id="B09">B09</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e B10" id="B10">B10</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e B11" id="B11">B11</div>
+                        </div>
+                    </div>
+                    <div class="estd">
+                    </div>
+                    <div class="linha estb b d-flex align-items-center justify-content-center">
+                        <div class="caixa">
+                            <div class="paralelograma d B12" id="B12">B12</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d B13" id="B13">B13</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d B14" id="B14">B14</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d B15" id="B15">B15</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d B16" id="B16">B16</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d B17" id="B17">B17</div>
+                        </div>
+                    </div>
+                    <div class="linha u d-flex align-items-center justify-content-center">
+                        <div class="caixa">
+                            <div class="paralelograma e B18" id="B18">B18</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e B19" id="B19">B19</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e B20" id="B20">B20</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e B21" id="B21">B21</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e B22" id="B22">B22</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e B23" id="B23">B23</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="piso_1" class="d-flex flex-column align-items-center justify-content-center">
+                    <div>
+                        <h3>Piso 1</h3>
+                    </div>
+                    <div class="linha b d-flex align-items-center justify-content-center">
+                        <div class="caixa">
+                            <div class="paralelograma d C00" id="C00">C00</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d C01" id="C01">C01</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d C02" id="C02">C02</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d C03" id="C03">C03</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d C04" id="C04">C04</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d C05" id="C05">C05</div>
+                        </div>
+                    </div>
+                    <div class="linha estc d-flex align-items-center justify-content-center">
+                        <div class="caixa">
+                            <div class="paralelograma e C06" id="C06">C06</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e C07" id="C07">C07</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e C08" id="C08">C08</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e C09" id="C09">C09</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e C10" id="C10">C10</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e C11" id="C11">C11</div>
+                        </div>
+                    </div>
+                    <div class="estd">
+                    </div>
+                    <div class="linha estb b d-flex align-items-center justify-content-center">
+                        <div class="caixa">
+                            <div class="paralelograma d C12" id="C12">C12</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d C13" id="C13">C13</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d C14" id="C14">C14</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d C15" id="C15">C15</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d C16" id="C16">C16</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma d C17" id="C17">C17</div>
+                        </div>
+                    </div>
+                    <div class="linha u d-flex align-items-center justify-content-center">
+                        <div class="caixa">
+                            <div class="paralelograma e C18" id="C18">C18</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e C19" id="C19">C19</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e C20" id="C20">C20</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e C21" id="C21">C21</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e C22" id="C22">C22</div>
+                        </div>
+                        <div class="caixa">
+                            <div class="paralelograma e C23" id="C23">C23</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer d-flex align-items-center justify-content-center ">
+            <p>&copy;2022 - Grupo2DB8 </p>
+        </div>
+    </footer>
+    <script src="../js/mapaParque.js"></script>
+</body>
+
+</html>

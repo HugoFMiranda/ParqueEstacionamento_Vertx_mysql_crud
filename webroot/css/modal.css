@@ -1,0 +1,49 @@
+h1 {
+    text-align: center;
+    width: 90%;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    color: #003E56;
+    border-bottom: 1px solid #003E56;
+}
+
+.containert {
+    width: 85%;
+}
+
+.h4 {
+    color: #003E56;
+    text-align: left;
+    flex: 1;
+}
+
+.btn.model {
+    flex: 0.1;
+}
+
+.model.product-add span {
+    padding: 7px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.modal {
+    background-color: rgba(0, 0, 155, 0.151);
+}
+
+.modal-header {
+    background-color: #003e56;
+    color: white;
+}
+
+.close {
+    color: white;
+}
+
+.close:hover {
+    color: white;
+}
+
+.modal-footer>.btn-primary {
+    background-color: #003e56;
+}

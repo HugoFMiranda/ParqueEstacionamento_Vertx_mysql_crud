@@ -1,0 +1,186 @@
+/** pagina inicial - index */
+
+#conteudo {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.carousel {
+    width: 100%;
+    background-color: #003E56;
+}
+
+header {
+    margin-bottom: 0px;
+}
+
+.container_carr {
+    width: 100%;
+    height: 100%;
+}
+
+.Aderir_esquerda {
+    padding-left: 20px;
+    width: 50%;
+}
+
+.Aderir_texto h1 {
+    font-size: 50px;
+}
+
+.Aderir_texto span {
+    color: #003E56;
+}
+
+.Aderir_texto p {
+    font-size: 25px;
+}
+
+.Aderir_texto p span {
+    color: #003E56;
+    font-weight: bold;
+}
+
+.Aderir_direita {
+    width: 65%;
+    margin-left: 50px;
+}
+
+.Aderir_direita img {
+    width: 100%;
+    height: 100%;
+}
+
+.Aderir_butao {
+    padding-top: 10px;
+}
+
+.Aderir_butao .H_button span,
+a {
+    text-decoration: none;
+}
+
+.Aderir_butao .H_Button {
+    padding: 16px 50px 16px 50px;
+    font-size: 25px;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    background-color: #003E56;
+}
+
+.precos {
+    background-color: #F0F4FF;
+}
+
+.precos h1 {
+    color: #003E56;
+}
+
+.header_pp {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 50px;
+    color: white;
+}
+
+.container_vantagens {
+    width: 100%;
+    padding-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerV {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.dir {
+    padding-right: 15%;
+    flex: 50%;
+}
+
+.esq {
+    flex: 50%;
+    padding-left: 15%;
+}
+
+.vantagem h3 {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.vantagem {
+    width: 70%;
+    color: white;
+    font-size: 15px;
+}
+
+.tabela_precos,
+td {
+    width: 65%;
+    border: 1px solid #003E56;
+    font-size: 20px;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #003E56;
+    color: white;
+}
+
+.texto_contactos {
+    color: white;
+    width: 80%;
+    padding-bottom: 60px;
+}
+
+@media (max-width: 800px) {
+    #conteudo {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .Aderir_esquerda,
+    .Aderir_direita {
+        width: 100%;
+        flex: 100%;
+    }
+    .Aderir_direita {
+        margin-left: 0px;
+    }
+    .tabela_preços,
+    td {
+        width: 50%;
+    }
+    .tabela_preços,
+    tr {
+        width: 90%;
+    }
+    .dir {
+        padding: 1%;
+        flex: 100%;
+    }
+    .esq {
+        padding: 1%;
+        flex: 100%;
+    }
+    .containerV,
+    .vantagem {
+        width: 100%;
+        flex: 100%;
+    }
+    .container_vantagens {
+        flex-wrap: wrap;
+    }
+}
